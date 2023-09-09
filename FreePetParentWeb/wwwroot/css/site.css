@@ -2,6 +2,19 @@
     font-family: 'Archivo Black', sans-serif;
 }
 
+.petCardContainer {
+    display: flex;
+    font-family: 'Archivo', sans-serif;
+    font-size: 22px;
+
+    align-items:center;
+}
+
+.petCardImage {
+    max-width:50%;
+    min-width: 400px;
+}
+
 html {
     font-size: 14px;
 }
