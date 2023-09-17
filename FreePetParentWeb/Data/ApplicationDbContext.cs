@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using FreePetParentWeb.Models;
 
 namespace FreePetParentWeb.Data
 {
@@ -9,5 +10,6 @@ namespace FreePetParentWeb.Data
             : base(options)
         {
         }
+        public DbSet<FreePetParentWeb.Models.Parent>? Parent { get; set; }
     }
 }
