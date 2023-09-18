@@ -26,7 +26,7 @@ namespace FreePetParentWeb.Controllers
                           View(await _context.Parent.ToListAsync()) :
                           Problem("Entity set 'ApplicationDbContext.Parent'  is null.");
         }
-
+        
         // GET: Parents/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -51,6 +51,19 @@ namespace FreePetParentWeb.Controllers
             return View();
         }
 
+        // GET: Parents/ShowSearchForm
+        public IActionResult ShowSearchForm()
+        {
+            return View();
+        }
+
+        // POST: Parents/ShowSearchResults
+        public async Task<IActionResult> ShowSearchResults(string SearchPhrase)
+        {
+
+            return View("Index", await _context.Parent.Where(p => p.PostalCode.Contains(SearchPhrase)).ToListAsync());
+         
+        }
         // POST: Parents/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
