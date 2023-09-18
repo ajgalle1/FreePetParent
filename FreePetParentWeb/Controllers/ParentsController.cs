@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using FreePetParentWeb.Data;
 using FreePetParentWeb.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FreePetParentWeb.Controllers
 {
@@ -44,7 +45,7 @@ namespace FreePetParentWeb.Controllers
 
             return View(parent);
         }
-
+        [Authorize]
         // GET: Parents/Create
         public IActionResult Create()
         {
@@ -64,9 +65,12 @@ namespace FreePetParentWeb.Controllers
             return View("Index", await _context.Parent.Where(p => p.PostalCode.Contains(SearchPhrase)).ToListAsync());
          
         }
+
+
         // POST: Parents/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,ParentName,StreetAddress,City,State,Country,PostalCode,Phone,PetDescription,PetRequirements")] Parent parent)
@@ -79,7 +83,7 @@ namespace FreePetParentWeb.Controllers
             }
             return View(parent);
         }
-
+        [Authorize]
         // GET: Parents/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -95,7 +99,7 @@ namespace FreePetParentWeb.Controllers
             }
             return View(parent);
         }
-
+        [Authorize]
         // POST: Parents/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -130,7 +134,7 @@ namespace FreePetParentWeb.Controllers
             }
             return View(parent);
         }
-
+        [Authorize]
         // GET: Parents/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -150,6 +154,7 @@ namespace FreePetParentWeb.Controllers
         }
 
         // POST: Parents/Delete/5
+        [Authorize]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
