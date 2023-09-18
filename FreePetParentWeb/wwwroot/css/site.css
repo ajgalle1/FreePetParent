@@ -19,4 +19,14 @@ html {
 
 body {
   margin-bottom: 60px;
+
+
+}
+
+#heroCard{
+    width:1000px;
+    display:flex;
+}
+#petHero{
+    width:300px;
 }
