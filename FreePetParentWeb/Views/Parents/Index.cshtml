@@ -4,40 +4,46 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Can you help these pets?</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Add a request for someone to help your pet.</a>
 </p>
 <table class="table">
     <thead>
         <tr>
-   @*          <th>
+            @* <th>
                 @Html.DisplayNameFor(model => model.ParentName)
-            </th>
-            <th>
+            </th> *@
+            @* <th>
                 @Html.DisplayNameFor(model => model.StreetAddress)
             </th> *@
             <th>
+                <h3>Location</h3>
+            </th>
+            @* <th>
                 @Html.DisplayNameFor(model => model.City)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.State)
-            </th>
-            <th>
+            </th> *@
+            @* <th>
                 @Html.DisplayNameFor(model => model.Country)
-            </th>
-            <th>
+            </th> *@
+            @* <th>
                 @Html.DisplayNameFor(model => model.PostalCode)
             </th>
-@*             <th>
+             *@
+             @* <th>
                 @Html.DisplayNameFor(model => model.Phone)
-            </th> *@
+            </th> *@ 
             <th>
-                @Html.DisplayNameFor(model => model.PetDescription)
+                @* @Html.DisplayNameFor(model => model.PetDescription) *@
+                <h3> Pet Description</h3>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.PetRequirements)
+@*                 @Html.DisplayNameFor(model => model.PetRequirements)
+                *@ <h3> Service Requested</h3>
             </th>
             <th></th>
         </tr>
@@ -45,28 +51,28 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
- @*            <td>
+            @* <td>
                 @Html.DisplayFor(modelItem => item.ParentName)
-            </td>
-            <td>
+            </td> *@
+            @* <td>
                 @Html.DisplayFor(modelItem => item.StreetAddress)
-            </td>
-  *@           <td>
-                @Html.DisplayFor(modelItem => item.City)
-            </td>
-            <td>
+            </td> *@
+           <td>
+                @Html.DisplayFor(modelItem => item.City), 
+            @* </td>
+            <td> *@
                 @Html.DisplayFor(modelItem => item.State)
             </td>
-    @*         <td>
+         @* <td>
                 @Html.DisplayFor(modelItem => item.Country)
             </td>
-            <td>
+ *@@*             <td>
                 @Html.DisplayFor(modelItem => item.PostalCode)
             </td>
-            <td>
+    *@        @*  <td>
                 @Html.DisplayFor(modelItem => item.Phone)
-            </td>
-     *@        <td>
+            </td> *@
+             <td>
                 @Html.DisplayFor(modelItem => item.PetDescription)
             </td>
             <td>

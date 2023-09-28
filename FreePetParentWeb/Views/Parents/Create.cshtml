@@ -4,68 +4,68 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1>Tell us about yourself.</h1>
 
-<h4>Parent</h4>
+
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="ParentName" class="control-label"></label>
+                <label asp-for="ParentName" class="control-label">What is the owner's name?</label>
                 <input asp-for="ParentName" class="form-control" />
                 <span asp-validation-for="ParentName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="StreetAddress" class="control-label"></label>
+                <label asp-for="StreetAddress" class="control-label">What is the street address you will need the pet sitter?</label>
                 <input asp-for="StreetAddress" class="form-control" />
                 <span asp-validation-for="StreetAddress" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="City" class="control-label"></label>
+                <label asp-for="City" class="control-label">What city is that?</label>
                 <input asp-for="City" class="form-control" />
                 <span asp-validation-for="City" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="State" class="control-label"></label>
+                <label asp-for="State" class="control-label">Which state?</label>
                 <input asp-for="State" class="form-control" />
                 <span asp-validation-for="State" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Country" class="control-label"></label>
+                <label asp-for="Country" class="control-label">Which country?</label>
                 <input asp-for="Country" class="form-control" />
                 <span asp-validation-for="Country" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="PostalCode" class="control-label"></label>
+                <label asp-for="PostalCode" class="control-label">Zip code?</label>
                 <input asp-for="PostalCode" class="form-control" />
                 <span asp-validation-for="PostalCode" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Phone" class="control-label"></label>
+                <label asp-for="Phone" class="control-label">Your phone number?</label>
                 <input asp-for="Phone" class="form-control" />
                 <span asp-validation-for="Phone" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="PetDescription" class="control-label"></label>
+                <label asp-for="PetDescription" class="control-label">What sort of pets do you have?</label>
                 <input asp-for="PetDescription" class="form-control" />
                 <span asp-validation-for="PetDescription" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="PetRequirements" class="control-label"></label>
+                <label asp-for="PetRequirements" class="control-label">What do you need the sitter to do?</label>
                 <input asp-for="PetRequirements" class="form-control" />
                 <span asp-validation-for="PetRequirements" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Request" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Find pets to help</a>
 </div>
 
 @section Scripts {
